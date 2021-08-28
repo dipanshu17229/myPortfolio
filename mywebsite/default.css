@@ -1,0 +1,359 @@
+/* Creating a variable by using a colon */
+:root{
+    /* Variables for background colors throughout the website. */
+    --mainColor:#eaeaea;
+    --secondaryColor:#fff;
+
+    /* Variables for border colors throughout the website. */
+    --borderColor:#c1c1c1;
+
+    /* Variables for text colors throughout the website. */
+    --mainText: black;
+    --secondaryText: #4b5156;
+
+    /* Variable for border color change on 4 theme circles when theme changes. */
+    --themeDotBorder: #24292e;
+
+    /* For "What I Do" div background-color. */
+    --previewBg: rgb(251, 249, 243, 0.8);
+
+    /* For "What I Do" shadow div background-color. */
+    --previewShadow: #f0ead6;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    color: var(--mainText);
+    font-family: 'Russo One', sans-serif;
+    font-weight: 500;
+}
+
+p, li, span, label, input, textarea {
+    color: var(--secondaryText);
+    font-family: 'Roboto Mono', monospace;
+}
+
+a{
+    /* To remove the underline from the anchor tags */
+    text-decoration: none;
+    color: #17a2b8;
+}
+
+ul {
+    /* To remove the bullets from the unordered lists */
+    list-style: none;
+}
+
+
+/* Setting the font-size for all the header tags */
+h1 {font-size: 56px;}
+h2 {font-size: 36px;}
+h3 {font-size: 28px;}
+h4 {font-size: 24px;}
+h5 {font-size: 20px;}
+h6 {font-size: 16px;}
+
+
+.s1{
+    background-color: var(--mainColor);
+    border-bottom: 1px solid var(--borderColor);
+    /* This property is added to avoid the white space in the head of the page */
+    /* Comment it to see what happens */
+    overflow: auto;
+}
+
+.s2{
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--borderColor);
+    /* This property is added to avoid the white space in the head of the page */
+    /* Comment it to see what happens */
+    overflow: auto;
+}
+
+.main-container{
+    /* To define the width of the container. */
+    width:1200px;
+    /* The container will be aligned to center and not the text inside it. */
+    margin: 0 auto;
+}
+
+
+.greeting-wrapper{
+    /* This makes our area, the grid area. */
+    display: grid;
+    /* To center the text horizontally. */
+    text-align: center;
+
+    /* To center the text vertically. */
+    align-content: center;
+    min-height: 10em;
+}
+
+
+.intro-wrapper{
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+
+    /* To bring the shadow object feel into the page. */
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+    /* The whole intro-wrapper is now a grid area. */
+    display: grid;
+    /* This below line helps us define the number of columns we want. fr is Fraction. */
+    /* If we have 3 values, then 1fr means it'll take the 1/3rd of the row size. Similarly for 2,3,4,5, etc. */
+    grid-template-columns: 1fr 1fr;
+
+    /* To define height of each of the rows of grid. */
+    /* grid-template-rows: 3em 30em; */
+
+    /* In this, we'll be using names which we defined in the grid-area
+        of .nav-wrapper, .left-column, .right-column. */
+    /* The 'nav-wrapper' is saying that add this to the first column. */
+    /* Adding this twice means it'll take up the entire first row. */
+    grid-template-areas:
+        'nav-wrapper nav-wrapper'
+        'left-column right-column'
+    ;
+}
+
+
+.nav-wrapper{
+    /* Can set whatever name we want to. But to maintain consistency, we use the same name. */
+    grid-area: nav-wrapper;
+    border-bottom: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+
+    /* Making it a flex display so that a div and a ul navigation come in a single line. */
+    display: flex;
+
+    /* To move all the elements as far away as possible. For 2 elements, they'll on the extreme ends of the row. */
+    justify-content: space-between;
+
+    /* In case of display flex, we use align-items instead of align-content. */
+    align-items: center;
+
+    background-color: var(--mainColor);
+}
+
+.dots-wrapper{
+    /* Making it a flex display so that 3 dots come in a single line. */
+    display: flex;
+    padding: 10px;
+}
+
+#dot-1{
+    background-color: #FC6058;
+}
+
+#dot-2{
+    background-color: #FEC02F;
+}
+
+#dot-3{
+    background-color: #2ACA3E;
+}
+
+.browser-dots{
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 5px;
+
+    /* To bring the shadow object feel into the page. */
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+}
+
+
+#navigation{
+    margin: 0;
+    padding: 10px;
+}
+
+#navigation li{
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+.left-column{
+    /* Can set whatever name we want to. But to maintain consistency, we use the same name. */
+    grid-area: left-column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#profile_pic{
+    /* By default, img tag is display-inline. */
+    display: block;
+    margin: 0 auto;
+
+    height: 200px;
+    width: 200px;
+
+    /* Used so that no matter what size of the picture is, it
+        will try to adjust the image and crops where it needs to.
+        Prevents from stretching or collapsing the image. */
+    object-fit: cover;
+
+    border: 2px solid var(--borderColor);
+}
+
+#theme-options-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.theme-dot{
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    border-radius: 50%;
+
+    margin: 5px;
+    border: 2px solid var(--themeDotBorder);
+
+    /* To bring the shadow object feel into the page. */
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+
+    cursor: pointer;
+}
+
+.theme-dot:hover{
+    border-width: 5px;
+}
+
+#light-mode{
+    background-color: #fff;
+}
+
+#blue-mode{
+    background-color: #192734;
+}
+
+#green-mode{
+    background-color: #78866B;
+}
+
+#purple-mode{
+    background-color: #7E4C74;
+}
+
+#settings-note{
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+.right-column{
+    /* Can set whatever name we want to. But to maintain consistency, we use the same name. */
+    grid-area: right-column;
+
+    display: grid;
+    align-content: center;
+
+    /* Padding is set so that when the screen size is below 800px, it'd still maintain that gap and
+        no overflow occurs. */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#preview-shadow{
+    background-color: var(--previewShadow);
+    width: 300px;
+    height: 180px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+#preview{
+    width: 300px;
+    border: 1.5px solid #17a2b8;
+    background-color: var(--previewBg);
+    padding: 15px;
+
+    /* This is made relative so that all the 4 box-dotes (.corner) come
+        on the corners of the preview box. */
+    position: relative;
+}
+
+.corner{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid #17a2b8;
+    background-color: #fff;
+
+    /* This is added so that we can set our individual corner id's 
+        to some specific coordinates. */
+    position: absolute;
+}
+
+#corner-tl{
+    top: -5px;
+    left: -5px;
+}
+
+#corner-tr{
+    top: -5px;
+    right: -5px;
+}
+#corner-br{
+    bottom: -5px;
+    right: -5px;
+}
+#corner-bl{
+    bottom: -5px;
+    left: -5px;
+}
+
+
+
+/* To make our website responsive, we use @media screen command */
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        /* To define the width of the container. */
+        width:95%;
+        /* It's already centered before, so we don't have to take care of that now. */
+    }
+}
+
+
+@media screen and (max-width: 800px){
+    .intro-wrapper{
+        /* This below line helps us define the number of columns we want. fr is Fraction. */
+        /* If we have 3 values, then 1fr means it'll take the 1/3rd of the row size. Similarly for 2,3,4,5, etc. */
+        grid-template-columns: 1fr;
+    
+        /* To define height of each of the rows of grid. */
+        /* grid-template-rows: 3em 30em; */
+    
+        /* In this, we'll be using names which we defined in the grid-area
+            of .nav-wrapper, .left-column, .right-column. */
+        /* The 'nav-wrapper' is saying that add this to the first column. */
+        /* Adding this twice means it'll take up the entire first row. */
+        grid-template-areas:
+            'nav-wrapper'
+            'left-column'
+            'right-column'
+        ;
+    }
+
+    .right-column{
+        justify-content: center;
+    }
+}
