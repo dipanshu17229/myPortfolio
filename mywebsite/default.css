@@ -320,6 +320,39 @@ h6 {font-size: 16px;}
     left: -5px;
 }
 
+/* Section 1 ends here. */
+/* Section 2 Starts */
+.about-wrapper{
+    display: grid;
+    /* The below line makes our about-wrapper display responsive.
+        It says, repeat that operation, by "auto-fit" it means, try
+        fitting as many columns as you can. By "minmax", it says
+        if we go below 320px, then stack items to one another, otherwise,
+        just use the 1fration of the whole row. */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    /* Creates a gap between columns of a grid display. */
+    gap:50px;
+}
+
+#skills{
+    /* Display flex will align items into 1 line. */
+    display: flex;
+    /* To create even space between columns. */
+    justify-content: space-evenly;
+
+    background-color: var(--previewShadow);
+}
+
+.social-links{
+    display: grid;
+    align-content: center;
+    text-align: center;
+}
+
 
 
 /* To make our website responsive, we use @media screen command */
