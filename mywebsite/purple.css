@@ -1,0 +1,24 @@
+/* Creating a variable by using a colon */
+:root{
+    /* Variables for background colors throughout the website. */
+    --mainColor:#46344E;
+    --secondaryColor:#382a3f;
+
+    /* Variables for border colors throughout the website. */
+    --borderColor:#1d1520;
+
+    /* Variables for text colors throughout the website. */
+    --mainText: #fff;
+    --secondaryText: #eeeeee;
+
+    /* Variable for border color change on 4 theme circles when theme changes. */
+    --themeDotBorder: #fff;
+
+    /* For "What I Do" div background-color. */
+    --previewBg: rgb(29, 21, 32, 0.8);
+
+    /* For "What I Do" shadow div background-color. */
+    --previewShadow: #2b202f;
+
+    --buttonColor: #8534a3;
+}

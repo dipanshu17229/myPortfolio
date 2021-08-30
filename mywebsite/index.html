@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="default.css">
+    <link id="theme-style" rel="stylesheet" href="">
 </head>
 <body>
 
@@ -39,10 +40,10 @@
                     <img id="profile_pic" src="images/Dipanshu.JPG" alt="">
                     <h5 style="text-align: center; line-height: 0;">Personalize Theme</h5>
                     <div id="theme-options-wrapper">
-                        <div id="light-mode" class="theme-dot"></div>
-                        <div id="blue-mode" class="theme-dot"></div>
-                        <div id="green-mode" class="theme-dot"></div>
-                        <div id="purple-mode" class="theme-dot"></div>
+                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                        <div data-mode="green" id="green-mode" class="theme-dot"></div>
+                        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
                     </div>
 
                     <p id="settings-note">*Theme settings will be saved for<br> your next visit.</p>
@@ -108,7 +109,7 @@
                     <h4>Find me on social links</h4>
                     <a target="_blank" href="https://github.com/dipanshu17229">GitHub</a>
                     <br>
-                    <a target="_blank" href="#">LinkedIn</a>
+                    <a target="_blank" href="https://www.linkedin.com/in/dipanshu-yadav-aaa2ab186/">LinkedIn</a>
                 </div>
             </div>
         </div>
@@ -116,15 +117,77 @@
 
     <section class="s1">
         <div class="main-container">
-            Portfolio
+            <h3 style="text-align: center;">Some of my past projects</h3>
+            <div class="post-wrapper">
+
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="images/to-do-list.png" alt="">
+                        <div class="post-preview">
+                            <h6 class="post-title">To-Do List</h6>
+                            <p class="post-intro">A basic todo list site created using HTML, CSS and JAVASCRIPT.
+                                It includes the CRUD (Create, Read, Update, and Delete)
+                                functionality.
+                            </p>
+                            <a target="_blank" href="https://github.com/dipanshu17229/TODO-List">Project Link</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="images/chatting-room.PNG" alt="">
+                        <div class="post-preview">
+                            <h6 class="post-title">Real-Time Chat Application</h6>
+                            <p class="post-intro">Designed built & mantained a the lab managment
+                                system for FOI Laboratories</p>
+
+                                <a target="_blank" href="https://github.com/dipanshu17229/ChattingRoom">Project Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="post">
+                        <img class="thumbnail" src="images/virtual-piano.PNG" alt="">
+                        <div class="post-preview">
+                            <h6 class="post-title">Virtual Piano using JavaScript</h6>
+                            <p class="post-intro">A virtual piano for all to build their interest in music
+                                instruments. Made with HTML5, CSS3, JavaScript, and with Love.
+                            </p>
+
+                                <a target="_blank" href="https://github.com/dipanshu17229/virtual-piano">Project Link</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <section class="s2">
         <div class="main-container">
-            Contact
+            <h3 style="text-align: center;">Get In Touch</h3>
+
+            <form id="contact-form">
+                <label for="">Name</label>
+                <input type="text" class="input-field" name="name">
+
+                <label for="">Subject</label>
+                <input type="text" class="input-field" name="subject">
+
+                <label for="">Email</label>
+                <input type="text" class="input-field" name="email">
+
+                <label for="">Message</label>
+                <textarea type="text" class="input-field" name="message"></textarea>
+
+                <input type="submit" id="submit-btn" value="Send">
+
+            </form>
         </div>
     </section>
     
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
